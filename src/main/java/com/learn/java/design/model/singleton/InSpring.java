@@ -1,6 +1,5 @@
 package com.learn.java.design.model.singleton;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
@@ -16,18 +15,11 @@ public class InSpring {
     @PostConstruct
     public void init() {
         // 初始化操作
+        System.out.println("InSpring init...");
     }
 
-}
-
-
-class Test {
-
-    @Autowired
-    private InSpring inSpring;
-
-    public void method() {
-        // inSpring 逻辑处理
+    public void process() {
+        System.out.println("我干了什么事情.");
     }
 
 }
