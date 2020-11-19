@@ -22,11 +22,11 @@ public class InnerClass {
     }
 }
 
-
 class InnerClassTest {
     public static void main(String[] args) {
         InnerClass instance1 = InnerClass.getInstance();
         InnerClass instance2 = InnerClass.getInstance();
-        System.out.println(instance1 == instance2); // true
+        // true
+        System.out.println(instance1 == instance2);
     }
 }

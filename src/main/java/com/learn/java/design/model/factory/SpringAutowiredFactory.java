@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 /**
  * @author hhs
  * @since 2020/10/29 22:03
+ * 通过Autowired注入
  */
 @Component
 public class SpringAutowiredFactory {

@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 /**
  * @author hhs
  * @since 2020/10/29 20:08
+ * 实现ApplicationContextAware接口
  */
 @Component
 public class SpringAwareFactory implements ApplicationContextAware {
