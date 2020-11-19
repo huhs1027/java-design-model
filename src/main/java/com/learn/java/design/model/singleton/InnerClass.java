@@ -10,7 +10,7 @@ public class InnerClass {
     private InnerClass() {
     }
 
-    private static class InnerClassHodler {
+    private static class InnerClassHolder {
         private static InnerClass innerClass = new InnerClass();
     }
 
@@ -18,7 +18,7 @@ public class InnerClass {
      * 获取实例
      */
     public static InnerClass getInstance() {
-        return InnerClassHodler.innerClass;
+        return InnerClassHolder.innerClass;
     }
 }
 
