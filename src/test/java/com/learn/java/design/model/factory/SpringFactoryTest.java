@@ -14,9 +14,12 @@ public class SpringFactoryTest extends BaseTest {
     public void test() {
         Person person = SpringAutowiredFactory.getBean("person", Person.class);
         System.out.println(person.toString());
+
         Person person1 = SpringAwareFactory.getBean("person", Person.class);
         System.out.println(person1.toString());
-        System.out.println(person == person1);
+
+        Person person2 = SpringStructureFactory.getBean("person", Person.class);
+        System.out.println(person2.toString());
     }
 
 }
