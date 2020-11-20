@@ -27,4 +27,8 @@ public class SpringAutowiredFactory {
     public static <T> T getBean(String beanName, Class<T> tClass) {
         return applicationContext.getBean(beanName, tClass);
     }
+
+    public static <T> T getBean(Class<T> tClass) {
+        return applicationContext.getBean(tClass);
+    }
 }
