@@ -4,6 +4,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
 /**
  * @author hhs
  * @since 2020/10/29 22:03
@@ -30,5 +34,12 @@ public class SpringAutowiredFactory {
 
     public static <T> T getBean(Class<T> tClass) {
         return applicationContext.getBean(tClass);
+    }
+
+    public static <T> List<T> getBeans(Class<T> tClass) {
+        ArrayList<T> tList = new ArrayList<>();
+        Map<String, T> beansOfType = applicationContext.getBeansOfType(tClass);
+        tList.addAll(beansOfType.values());
+        return tList;
     }
 }
